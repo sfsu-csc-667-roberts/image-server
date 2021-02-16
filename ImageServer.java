@@ -63,6 +63,9 @@ public class ImageServer {
     printWriter.write("HTTP/1.1 200 OK\r\n");
     printWriter.write("Content-Type: image/png\r\n");
     printWriter.write("Content-Length: " + file.length() + "\r\n");
+    printWriter.write("Access-Control-Allow-Origin: *\r\n");
+    printWriter.write("Access-Control-Allow-Methods: *\r\n");
+    printWriter.write("Access-Control-Allow-Headers: *\r\n");
     printWriter.write("\r\n");
     printWriter.flush();
 
